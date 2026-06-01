@@ -336,17 +336,74 @@
 
 
     <div id="scammerModal" class="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 hidden z-50">
-        <div class="bg-[#F5F5F5] rounded-3xl max-w-sm w-full shadow-2xl overflow-hidden flex flex-col border border-gray-200">
-            <div class="bg-[#E53935] text-white text-center py-4 font-bold text-sm uppercase tracking-wide">AMARAN SCAMMER</div>
-            <div class="p-5 space-y-4 max-h-[50vh] overflow-y-auto no-scrollbar text-xs">
-                <div class="bg-white rounded-2xl p-4 border-l-4 border-[#2E7D32]">
-                    <p class="font-bold text-[#2E7D32] mb-1">Laman Web Rasmi</p>
-                    <p class="text-gray-700">Domain tunggal rasmi kami: <span class="font-bold">www.danago.my</span></p>
+        <div class="bg-[#F5F5F5] rounded-3xl max-w-md w-full shadow-2xl overflow-hidden flex flex-col border border-gray-200">
+            
+            <div class="bg-[#E53935] text-white text-center py-4 font-extrabold text-sm uppercase tracking-wider">
+                AMARAN SCAMMER
+            </div>
+            
+            <div class="p-5 space-y-4 max-h-[65vh] overflow-y-auto no-scrollbar text-xs">
+                
+                <div class="bg-white rounded-2xl p-4 border-l-4 border-[#2E7D32] shadow-xs">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fas fa-check-circle text-[#2E7D32] text-sm"></i>
+                        <p class="font-extrabold text-[#2E7D32] text-sm">Laman Web Rasmi</p>
+                    </div>
+                    <p class="text-gray-600 font-medium mb-3">Kami hanya ada <span class="font-bold text-gray-900">satu (1)</span> laman web rasmi:</p>
+                    <a href="https://danago.my/" target="_blank" class="inline-flex items-center gap-2 bg-[#E8F5E9] text-[#2E7D32] font-bold px-4 py-2 rounded-xl border border-[#C8E6C9] hover:bg-[#C8E6C9] transition">
+                        <i class="fas fa-globe"></i> www.danago.my
+                    </a>
                 </div>
+
+                <div class="bg-white rounded-2xl p-4 border-l-4 border-[#1565C0] shadow-xs">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-wallet text-[#1565C0] text-sm"></i>
+                        <p class="font-extrabold text-[#1565C0] text-sm">Cara Pembayaran Yang Sah</p>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 font-medium list-none pl-0">
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 mt-0.5">•</span>
+                            <span>Login akaun anda sendiri di laman web rasmi untuk mendapatkan <span class="font-bold text-gray-900">QR Kod Pembayaran</span>.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 mt-0.5">•</span>
+                            <span><span class="font-bold text-gray-900">Tiada</span> bayaran melalui email, Facebook, WhatsApp atau pihak ketiga.</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 bg-red-50 text-red-600 font-black text-center py-2.5 rounded-xl border border-red-100 uppercase tracking-wide">
+                        Selain dari ini adalah PENIPUAN.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 border-l-4 border-[#EF6C00] shadow-xs">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-exclamation-triangle text-[#EF6C00] text-sm"></i>
+                        <p class="font-extrabold text-[#EF6C00] text-sm">Taktik Scammer</p>
+                    </div>
+                    <ul class="space-y-2.5 text-gray-600 font-medium list-none pl-0">
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 mt-0.5">•</span>
+                            <span>Scammer akan menghantar <span class="font-bold text-gray-900">screenshot QR Kod palsu</span> melalui WhatsApp.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 mt-0.5">•</span>
+                            <span>Sila <span class="font-bold text-gray-900">abaikan</span> dan jangan klik pautan yang dihantar oleh pihak luar.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 mt-0.5">•</span>
+                            <span>Sentiasa login akaun sendiri dan bayar melalui laman web rasmi sahaja.</span>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
+            
             <div class="p-4 bg-white border-t border-gray-100 flex justify-center">
-                <button onclick="closeScammerModal()" class="w-full bg-[#E53935] text-white font-bold py-2.5 rounded-xl text-xs">Saya Faham</button>
+                <button onclick="closeScammerModal()" class="w-full bg-[#E53935] hover:bg-[#D32F2F] text-white font-bold py-3 rounded-xl text-xs shadow-md flex items-center justify-center gap-2 transition cursor-pointer active:scale-98">
+                    <i class="fas fa-check-circle"></i> Saya Faham
+                </button>
             </div>
+
         </div>
     </div>
 
