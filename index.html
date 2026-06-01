@@ -17,7 +17,7 @@
         <header class="bg-white shadow-sm">
             <div class="max-w-md mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <img src="IMG_6396.png" alt="DanaGo Logo" class="h-8 object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-slate-800\'>Dana<span class=\'text-red-500\'>Go</span></span>\''">
+                    <img src="IMG_6398.png" alt="DanaGo Logo" class="h-8 object-contain" onerror="this.outerHTML='<span class=\'font-bold text-xl text-slate-800\'>Dana<span class=\'text-red-500\'>Go</span></span>\''">
                 </div>
                 <button class="text-gray-700 hover:text-gray-900"><i class="fas fa-bars text-2xl"></i></button>
             </div>
@@ -49,7 +49,7 @@
     <div id="paymentPage" class="hidden flex-col min-h-screen bg-white">
         <main class="max-w-md w-full mx-auto px-4 py-6 flex-grow flex flex-col items-center">
             <div class="w-20 h-20 rounded-2xl overflow-hidden shadow-xs mb-4 flex items-center justify-center">
-                <img src="IMG_6396.png" alt="Logo" class="w-full h-full object-contain">
+                <img src="IMG_6398.png" alt="Logo" class="w-full h-full object-contain">
             </div>
             <h2 class="text-gray-500 font-semibold text-center text-xs max-w-xs mb-6 leading-relaxed">
                 Halaman Web Resmi Pembayaran Pengembalian Pinjaman
@@ -96,7 +96,7 @@
     <div id="nextStepPage" class="hidden flex-col min-h-screen bg-white">
         <main class="max-w-md w-full mx-auto px-4 py-6 flex-grow flex flex-col items-center">
             <div class="w-20 h-20 rounded-2xl overflow-hidden shadow-xs mb-4 flex items-center justify-center">
-                <img src="IMG_6396.png" alt="Logo" class="w-full h-full object-contain">
+                <img src="IMG_6398.png" alt="Logo" class="w-full h-full object-contain">
             </div>
 
             <div class="w-full bg-[#FAF6F0] rounded-2xl border border-gray-200 p-5 mb-6">
@@ -124,7 +124,7 @@
     <div id="step3Page" class="hidden flex-col min-h-screen bg-white">
         <header class="bg-white border-b border-gray-100 py-3.5 px-4 shadow-xs">
             <div class="max-w-md mx-auto flex justify-between items-center">
-                <img src="IMG_6396.png" alt="DanaGo" class="h-6 object-contain">
+                <img src="IMG_6398.png" alt="DanaGo" class="h-6 object-contain">
                 <button class="text-slate-800"><i class="fas fa-bars text-xl"></i></button>
             </div>
         </header>
@@ -299,7 +299,7 @@
     <div id="thanksPage" class="hidden flex-col min-h-screen bg-white justify-between">
         <header class="bg-white border-b border-gray-100 py-4 px-4 shadow-xs text-center">
             <div class="max-w-md mx-auto flex justify-center">
-                <img src="IMG_6396.png" alt="DanaGo Logo" class="h-8 object-contain">
+                <img src="IMG_6398.png" alt="DanaGo Logo" class="h-8 object-contain">
             </div>
         </header>
 
@@ -355,7 +355,6 @@
         let timerInstance = null;
         let namaPelangganGlobal = "";
 
-        // Fungsi Aliran Navigasi Halaman
         function goToPaymentPage() {
             document.getElementById('mainPage').classList.add('hidden');
             document.getElementById('paymentPage').classList.remove('hidden');
@@ -375,10 +374,8 @@
             const phone = document.getElementById('inputPhone').value;
             const amaun = document.getElementById('inputAmaun').value;
 
-            // Simpan nama untuk halaman ucapan terakhir
             namaPelangganGlobal = nama;
 
-            // Masukkan data semakan ke Langkah 2
             document.getElementById('reviewNama').innerText = nama;
             document.getElementById('reviewIC').innerText = ic;
             document.getElementById('reviewLoanID').innerText = loanID.toUpperCase();
@@ -387,12 +384,10 @@
             const amaunFormat = parseFloat(amaun).toFixed(2);
             document.getElementById('reviewAmaun').innerText = "RM " + amaunFormat;
 
-            // Masukkan data automatik ke Langkah 3
             document.getElementById('displayLoanID').innerText = loanID.toUpperCase();
             document.getElementById('displayMainAmaun').innerText = "RM " + amaunFormat;
             document.getElementById('displaySubAmaun').innerText = "RM " + amaunFormat;
 
-            // Masukkan data automatik ke Langkah 4 (Halaman QR)
             document.getElementById('qrLoanID').innerText = loanID.toUpperCase();
             document.getElementById('qrMainAmaun').innerText = "RM " + amaunFormat;
 
@@ -419,7 +414,6 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        // Semakan Validasi Pemilihan Bank
         function checkBankSelection() {
             const selectBank = document.getElementById('selectBank').value;
             const btnFinalNext = document.getElementById('btnFinalNext');
@@ -430,7 +424,6 @@
             }
         }
 
-        // Buka Paparan QR Kod & Aktifkan Pemasa Mengundur
         function goToQRPage() {
             const selectBank = document.getElementById('selectBank');
             const bankText = selectBank.options[selectBank.selectedIndex].text.substring(3);
@@ -450,7 +443,6 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        // Engine JavaScript Pemasa Mengundur (1m 59s)
         function startCountdown() {
             clearInterval(timerInstance);
             let timeAllocated = 119; 
@@ -474,7 +466,6 @@
             }, 1000);
         }
 
-        // Sistem Pengesanan Kemasukan Fail Resit
         function handleFileSelected() {
             const fileInput = document.getElementById('receiptUpload');
             const placeholder = document.getElementById('uploadPlaceholder');
@@ -488,21 +479,17 @@
                 successDiv.classList.remove('hidden');
                 fileNameDisplay.innerText = "Fail dipilih: " + file.name;
                 
-                // Aktifkan butang hantar permohonan dengan warna aktif
                 btnSubmitForm.disabled = false;
                 btnSubmitForm.className = "flex-1 bg-gradient-to-r from-red-600 to-black text-white font-bold py-3.5 rounded-xl text-xs text-center shadow-md cursor-pointer transition duration-150 active:scale-95";
             }
         }
 
-        // Pemprosesan Terakhir Penghantaran & Buka Halaman Terima Kasih
         function finalSubmission() {
             clearInterval(timerInstance);
             
-            // Format susunan ayat mengikut nama pelanggan dinamik
             const susunanAyat = "Terima kasih <span class='font-extrabold text-slate-900'>" + namaPelangganGlobal + "</span> kerana telah berjaya membuat bayaran balik pinjaman anda di <span class='font-extrabold text-red-600'>DANAGO</span>.";
             document.getElementById('thanksMessage').innerHTML = susunanAyat;
 
-            // Tukar paparan skrin
             document.getElementById('qrPage').classList.add('hidden');
             document.getElementById('thanksPage').classList.remove('hidden');
             window.scrollTo({top: 0, behavior: 'smooth'});
